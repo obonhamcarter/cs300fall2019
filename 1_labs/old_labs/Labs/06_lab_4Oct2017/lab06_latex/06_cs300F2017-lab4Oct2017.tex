@@ -1,0 +1,124 @@
+\input{300pre}
+
+\long\def\omitit #1{}
+
+\begin{document}
+\MYTITLE{Lab 6: Alignment \\ 
+\color{red}Save this lab assignment to: {\tt labs/lab6}\color{black}}
+\MYHEADERS{Introduction to Bioinformatics}{Due: 11 Oct.}{Handed out on: 4 Oct. 2017}
+
+\vspace*{-.1in}
+\subsection*{Objectives}
+\vspace*{-.1in}
+
+\begin{itemize}
+	\item To understand the value of aligning genes and recognize the practical applications of this technique.
+	\item To gain familiarity with the use of web-based alignment tools to explore sequence similarity and understand how to modify their parameters.
+
+\end{itemize}
+
+\vspace*{-.1in}
+\subsection*{Reading Assignment}
+\vspace*{-.1in}
+Chapter 3 in Exploring Bioinformatics textbook.
+
+\vspace*{-.1in}
+\subsection*{Part 1:  Needleman-Wunsch Algorithm}
+\vspace*{-.1in} 
+
+
+In this part of the lab you are invited to further practice using a particular global alignment technique called the \emph{Needleman-Wunsch} algorithm. In this lab, you are to create a report document that provides the answers or solutions to the following tasks:
+
+
+\begin{enumerate}
+	\item \textbf{By Hand}: Compute the alignment of two sequences using the Needleman-Wunsch algorithm to generate an optimal global alignments for the sequences {\color{red} \textbf{ACGTACT}} and {\color{red} \textbf{ACTACGT}} by hand.  \textbf{Please show your work as demonstrated in class to complete this task by hand.} For this, you are expected to create your \emph{n} by \emph{n} matrix in as shown in Table \ref{tab:matrix} where you label each entry by a letter: \{(a),(b),(c), \dots\,(g)\} to be used to illustrate your three calculations, per entry, in your submitted document. \emph{Note: Gap = -1, Match = 1, and Mismatch = 0.} To complete this task, show the sequences as they align optimally.
+
+	
+	\item \textbf{By software}: Use the included python program (Needman-Wunsch.py) to implement a Needleman-Wunsch global alignment over the sequences {\color{red} \textbf{CTAG}} and {\color{red} \textbf{CGCTAATC}}.  Hint: Use this program to determine 10 altogether.  Please show your work as demonstrated in class by using screen shots of program output that helped you reach your conclusions. 
+	
+	
+	\item When do you expect to happen if you aligned {\color{red} \textbf{CAG}} with {\color{red} \textbf{TTTCAGCAGTTT}}? Use the Needleman-Wunsch algorithm (using the program or with pencil and paper) to generate all optimal global alignments for these sequences.  Please show your work as demonstrated in class (screen shots or typed in calculations similar to task 1, above).  State your initial reasoning and then discuss how your reasoning met (\emph{or failed to meet}) your expectations correct?
+
+
+	\item Note: in each case above, you can confirm your work by using the included python program. To run the program, you will have to edit each of the two input sequence files to update them with your sequences.
+\end{enumerate}
+
+\begin{table}[h!]
+	\caption{Label your matrix in this fashion and use the lettering-system to indicate the calculations of your own implementation of the NeedleMan-Wunsch algorithm for alignment.}
+	\label{tab:matrix}
+	\begin{center}
+	\begin{tabular}{|c||c|c|c|}
+	\hline
+		&&{\color{red}\textbf{A}}&{\color{red}\textbf{T}}\\
+		\hline\hline
+		&0&-1&-2\\
+		\hline
+		{\color{red}\textbf{A}}&-1&(a)&(b)\\
+		\hline
+		{\color{red}\textbf{T}}&-2&(d)&(c)\\
+		\hline
+		{\color{red}\textbf{G}}&-3&(g)&(d)\\
+	\hline
+	\end{tabular}
+	\end{center}
+\end{table}
+
+
+\vspace*{-.1in}
+\subsection*{Part 2:  Investigation of Online Alignment Tools for Influenza Virus}
+\vspace*{-.1in} 
+
+In the second part of the lab you are invited to explore online global and local alignment tools to investigate virulence. 
+
+\noindent Influenza viruses have received a great deal of study, and the ability to compare many strains has lead to significant advances in understanding what allows one strain to cause more severe disease than another.  The H5N1 ``bird flu'' virus makes an interesting case in point.  The virus causes severe influenza in birds and has become established in populations of domestic chickens and turkeys.  Human cases occur sporadically, mostly in individuals heavily exposed to infected birds, such as poultry farmers, and H5N1 flu is severe for humans as well.  Once a human case occurs, however, spread to another human is exceedingly rare, even among family members in close contact with the infected individual.  
+
+\noindent A 2006 article by van Riel \emph{et al.} demonstrated that the avian H5N1 virus binds to a form of sialic acid receptor that in humans is only found far down in the lungs and lower respiratory system.  Human viruses, in contrast, bind to a form of the receptor common in the upper respiratory tract. Thus, it is difficult for H5N1 to infect humans because our respiratory defenses normally prevent the virus from reaching the lungs.  However, a mutant strain in which HA was altered to be able to bind to sialic acid receptors in the upper respiratory tract could be a very dangerous strain indeed.
+
+\noindent So far, no such H5N1 strains that infect humans efficiently have been observed.  However, we might ask whether the strains that do make it into humans tend to have altered HA genes  - if so, that would suggest that either adaptive mutations could be occurring within the human host or that the viruses that cause human infections are subpopulations that are already better adapted.  There are many avian H5N1 sequences available and a number of sequences of the H5N1 viruses isolated from infected humans, so we can use sequence alignment to see whether these have essentially the same HA or noticeable differences.
+
+\begin{enumerate}
+	\item Find the listed file (below) that have been have been uploaded to the lab6 directory in the shared repository. 
+	
+	
+		\begin{itemize}
+		\item Influenza\_A\_Chicken\_Vietnam2005(avianH5N1)segment4.txt,
+		\item Influenza\_avianHong\_Kong2007(avianH5N1)segment4.txt,
+		\item Influenza\_A\_ChinaGD012006(humanH5N1isolate)segment4.txt
+	\end{itemize}
+
+	\item Perform pairwise comparisons of the three strains using at least \textbf{two} online tools (two are suggested below, for your convenience). 
+	\begin{itemize}
+		\item  First, you are invited to go to EMBOSS webpage at \url{www.ebi.ac.uk/Tools/emboss/} and select a global alignment technique to perform pairwise alignment of the three sequences. Save your results as a screen shot.
+
+		\item Then, you are then invited to go to NCBI and use a tool called BLAST to perform a similar alignment experiment. BLAST is a local alignment technique, where sequence alignment is done by finding one sequence within another.  The influenza virus M2 gene, for example, is another key player in the biology of the virus: once the virus enters the cell, M2 is involved in the release of the virus genome subunits so they can travel to the nucleus and direct viral replication.  Suppose we have sequenced segment 7 from the 2009 H1N1 pandemic virus but are uncertain what part of it represents the actual M2 coding region. To find out, we could align the well-characterized M2 coding sequence from the Brisbane strain with the full segment 7 sequence from the newly sequenced virus.
+	\end{itemize}
+	\item Add the following responses to your report:
+	\begin{itemize}
+	
+		\item Based on your results (which of course are limited - it would be necessary to do many more comparisons in reality), do you believe there is evidence that human adaptation is occurring in H5N1 viruses that might merit concern about human-to-human transmission in the near future?
+		\item Discuss similarities and differences between the alignment techniques (Emboss versus Blast at NCBI) you have selected.
+		\item Please save screen shots from each tool to place into your report. 
+	\end{itemize}
+		 
+\end{enumerate}
+
+
+\vspace*{-.1in}
+\subsection*{Required Deliverables}
+\vspace*{-.1in}
+All of the deliverables specified below should be placed into a new folder named `lab06' in your Bitbucket repository ({\tt cs300f2017-bbill})  and shared with the instructor by correctly using  appropriate Git commands, such as {\tt git add -a}, {\tt git commit -m ``your message''} and {\tt git push} to send your documents to the Bitbucket's server. When you have finished, please ensure that you have sent your files correctly to the Bitbucket Web site by checking the {\tt source} files. This will show you your recently pushed files on their web site. Please ask questions, if necessary.
+\color{red}
+\begin{enumerate}
+	\item A report including your hand-calculations and responses to the alignment problems in Part 1.
+		
+	\item Your report is to contain your reflections from Part 2 concerning the differences between the online alignment tools.
+	\item Make sure to submit a LibreOffice file, not a text file, with proper formatting and \textbf{your name included at the top of the document}.
+\end{enumerate}
+\color{black}
+
+\noindent You should see the instructor if you have questions about assignment submission.
+\end{document}
+
+
+
+%%%%%%%%%%%%%%%

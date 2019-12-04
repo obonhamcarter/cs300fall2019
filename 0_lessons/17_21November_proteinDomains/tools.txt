@@ -1,0 +1,22 @@
+>NP_001001849.1 transient receptor potential cation channel subfamily V member 6 [Danio rerio]
+MPPAISGEINHWWRQMRFRLQHKKGWNEMLDETFLMQTKRVNDIPLFSATKENNAACIKKLLDCSSTDIF
+ERGELGETALHVAVMNDNFEAAVALMNGAPELINEPMTSELYHGLTALHIAVINQNPNLIWEMIKRGADV
+TTPRVTGMYFRKRREGLFYYGEHILAFAACVGNKDIMSMLIKAGANIRAQDSRGNTILHLLVLQPNKTTA
+CQIFDFLLAQDAEQDSALPLDMVPNYKGLTPFKLAARDGNVFQHLVNRRKVVQWSLGPVSSYLYDLTEID
+SRVDEHSVLEIIATSHKKEARRILELTPVRQLITLKWNLYGKHYFRSLMVIYLVYISIFTVCCINRPLKG
+IPENYTKAGNDHTIKIKKTFKESYQSYTDQLRLIGEIISLIGAIIILLIEIPGILAVGVKRFFGQTALGG
+LFHVTLISYALLVLLLCGLRVTGIQGELIPMAFSLILGWFSLVYFARGFEMLGPYVIVIQKSIFGDITKF
+MWLSIIFLIGSSAALWIFYMTQEPLALPQYRSFPITLFSQFEVSVGQIDLPVDHTLFTHPVVYWTHVCFS
+LISNVLLFNLLVAMMSDTQWRVTQERDELWRTQVVATTLMLERKLPQCLWPRLGVCGLMFGLGERWYLRV
+EDRNDIMAQKLKRYVDAFPKDVEAPKEEKPSKSDGEQSITESNKEKSKKSKQYWSLIRRSIECEKEECVD
+CPNFKFL
+
+
+http://elm.eu.org/
+This computational biology resource mainly focuses on annotation and detection of eukaryotic linear motifs (ELMs) by providing both a repository of annotated motif data and an exploratory tool for motif prediction. ELMs, or short linear motifs (SLiMs), are compact protein interaction sites composed of short stretches of adjacent amino acids. They are enriched in intrinsically disordered regions of the proteome and provide a wide range of functionality to proteins (Davey,2011,Van Roey,2014) They play crucial roles in cell regulation and are also of clinical importance, as aberrant SLiM function has been associated with several diseases and SLiM mimics are often used by pathogens to manipulate their hosts' cellular machinery (Davey,2011, Uyar,2014)
+
+
+
+String: determine how proteins are connected to each other.
+https://string-db.org
+Help page: https://string-db.org/cgi/help.pl?UserId=NJGzx6kvAvZB&sessionId=2H8wROlLGsoQ

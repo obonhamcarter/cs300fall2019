@@ -1,0 +1,99 @@
+LOCUS       HUMCFTMCR               1458 bp    DNA     linear   PRI 26-JUL-2016
+DEFINITION  Homo sapiens cystic fibrosis transmembrane conductance regulator
+            (CFTR) gene, exons 23, 24a, and 24.
+ACCESSION   M96936
+VERSION     M96936.1
+KEYWORDS    alternative splicing; cystic fibrosis; cystic fibrosis
+            transmembrane conductance regulator; transmembrane conductance
+            regulator.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 1458)
+  AUTHORS   Yoshimura,K., Chu,C.S. and Crystal,R.G.
+  TITLE     Alternative splicing of intron 23 of the human cystic fibrosis
+            transmembrane conductance regulator gene resulting in a novel exon
+            and transcript coding for a shortened intracytoplasmic C terminus
+  JOURNAL   J. Biol. Chem. 268 (1), 686-690 (1993)
+   PUBMED   7678008
+FEATURES             Location/Qualifiers
+     source          1..1458
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /map="7q31-q32"
+                     /cell_type="neutrophil"
+     gene            <1..>1458
+                     /gene="CFTR"
+     mRNA            join(<1..57,1401..>1458)
+                     /gene="CFTR"
+                     /product="cystic fibrosis transmembrane conductance
+                     regulator"
+     CDS             join(<1..57,1401..>1458)
+                     /gene="CFTR"
+                     /codon_start=1
+                     /product="cystic fibrosis transmembrane conductance
+                     regulator"
+                     /protein_id="AAB59382.1"
+                     /translation="TVILCEHRIEAMLECQQFLVIEENKVRQYDSIQKLLNE"
+     mRNA            join(<1..57,1141..1400)
+                     /gene="CFTR"
+                     /product="cystic fibrosis transmembrane conductance
+                     regulator"
+     CDS             join(<1..57,1141..1158)
+                     /gene="CFTR"
+                     /note="ends at a premature stop codon"
+                     /codon_start=1
+                     /product="cystic fibrosis transmembrane conductance
+                     regulator"
+                     /protein_id="AAB59381.1"
+                     /translation="TVILCEHRIEAMLECQQFLQLQFY"
+     exon            <1..57
+                     /gene="CFTR"
+                     /note="G00-120-584"
+                     /number=23
+     intron          58..1400
+                     /gene="CFTR"
+                     /note="G00-120-584"
+                     /number=23
+     exon            1141..1400
+                     /gene="CFTR"
+                     /note="24a"
+     variation       1344
+                     /gene="CFTR"
+                     /note="in cDNA from macrophages"
+                     /replace="t"
+     exon            1401..>1458
+                     /gene="CFTR"
+                     /note="G00-120-584"
+                     /number=24
+ORIGIN      
+        1 acagtaattc tctgtgaaca caggatagaa gcaatgctgg aatgccaaca atttttggtg
+       61 agtctttata actttactta agatctcatt gcccttgtaa ttcttgataa caatctcaca
+      121 tgtgatagtt cctgcaaatt gcaacaatgt acaagttctt ttcaaaaata tgtatcatac
+      181 agccatccag ctttactcaa aatagctgca caagtttttc actttgatct gagccatgtg
+      241 gtgaggttga aatatagtaa atctaaaatg gcagcatatt actaagttat gtttataaat
+      301 aggatatata tactttttga gccctttatt tggggaccaa gtcatacaaa atactctact
+      361 gtttaagatt ttaaaaaagg tccctgtgat tctttcaata actaaatgtc ccatggatgt
+      421 ggtctgggac aggcctagtt gtcttacagt ctgatttatg gtattaatga caaagttgag
+      481 aggcacattt catttttcta gccatgattt gggttcaggt agtacctttc tcaaccacct
+      541 tctcactgtt cttaaaaaaa ctgtcacatg gccaggcaca gtggcttaca tctgtaatcc
+      601 caatactttg ggaggctgag gtggggggat tacttgaggc caggaattca agaccagccc
+      661 aggcaacata gtgaggcccc atctgtcttt attaaaacaa aacaaaactg tcacagcttc
+      721 tttcaagtga tgtttacaaa ttccctatgg tttagtcaca aggaagttct gaggatgatg
+      781 tatcacgtca tttctgttca ggcttttgag cctcctggag gtaaatggtt tccttactga
+      841 aggcttgtta ttaccatgat tatcactaag cttgaagtaa caaattaggg gggcagactc
+      901 acaacctctt gccctgccat ggacaagttc aagaatctaa gtaaagtcct ctattgtctg
+      961 atcttggatt tgctcaacct gaacaagcca aggaggtgta ttaaactcag gcacatcctg
+     1021 accaatttgg aattcttaag cttcagatca ctgtggaaga ggctcaactc tttatggtgc
+     1081 tgtagactta cgctcatttt ctaggtaatt tataagggac ctaatatttt gttttcaaag
+     1141 caacttcagt tctactaaac ctccctgaag aatcttccag ctgctgagta gaaaatcaca
+     1201 actaatttca cagatggtag aacctcctta gagcaaaagg acacagcagt taaatgtgac
+     1261 atacctgatt gttcaaaatg caaggctctg gacattgcat tctttgactt ttattttcct
+     1321 ttgagcctgt gccagtttct gtccctgctc tggtctgacc tgccttctgt cccagatctc
+     1381 actaacagcc atttccctag gtcatagaag agaacaaagt gcggcagtac gattccatcc
+     1441 agaaactgct gaacgaga
+//
+

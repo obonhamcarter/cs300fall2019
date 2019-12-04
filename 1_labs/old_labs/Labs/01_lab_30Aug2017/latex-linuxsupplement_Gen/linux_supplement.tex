@@ -1,0 +1,223 @@
+\input{390pre}
+\begin{document}
+\MYTITLE{Reading Supplement, 1 September 2017 \\
+Tips on Using Linux and the Command Line Interface}
+
+\subsection*{Directories, Folders, CLIs, GUIs}
+\vspace{-0.1in}
+A ``folder'' is the same thing as a ``directory''---a place to save
+files. 
+
+\noindent You can navigate
+between folders in one of two ways---by typing commands through the
+terminal window (this is sometimes called a ``CLI,'' or ``command line
+interface'') or by the more familiar method of clicking and double-clicking
+on images of folders and icons representing files (this is an example of
+a ``GUI,'' or ``graphical user interface''). 
+
+\noindent In this class we concentrate primarily on the command-line interface, since
+this material is valuable to people who go on to become 
+``power users''---professional
+developers, systems administrators, etc., who want to work as
+efficiently as possible. You are free to use the GUI
+for your own programming, but instructions will almost always
+be given in CLI form.
+
+\subsubsection*{Home Directory vs Desktop}
+\vspace{-0.1in}
+You have a ``home
+directory'' that has the same name as your account, e.g., Jane Smith has
+a home directory named ``{\tt smithj}.'' Within this directory is
+a subdirectory named ``{\tt Desktop}.'' When you see a file icon or folder
+on your screen, that is actually saved in your {\tt Desktop}
+subdirectory.
+
+\noindent When you right-click on the screen and choose ``Open in Terminal,'' commands
+typed in your
+terminal window will be relative to the {\tt Desktop} directory since that's 
+where you clicked to open the window. \textbf{\textit{The desktop is 
+{\em not} your home directory}}---it is one 
+level below it.
+
+\noindent It is okay to store things on the {\tt Desktop}. Just be aware that certain
+commands described in Table \ref{linux}, such as the command ``{\tt cd},'' 
+will automatically return you to your {\em home directory}
+and {\em not} to the {\tt Desktop}.
+
+\subsection*{Using the Terminal Window and Keyboard}
+\vspace{-0.1in}
+If you would like the terminal window application to appear in your list
+of applications on the left (the application ``launcher''), do the following:
+\begin{itemize}
+\item
+Right-click on the screen and select the ``Open in Terminal'' command.
+The icon for the terminal application should appear on the left---it
+looks like this: \includegraphics[width=.4in]{images/terminal}. 
+\textbf{\textit{You are not in your home directory---you are in the 
+{\tt Desktop} folder!}} To get to the home folder, type the command ``{\tt cd}''.
+\item
+Right-click on the terminal icon on the left and select ``Lock to
+Launcher''. This will permanently add the terminal window to the launcher.
+\end{itemize}
+
+{\em Remember---the next time you launch the Terminal application from
+this new icon, it will open in your home directory, not the desktop.}
+
+\subsubsection*{Prompts}
+\vspace{-0.1in}
+Terminal window commands are typed at 
+the {\em prompt}. The prompt is usually some 
+combination of your username, your computer (e.g., ``{\tt aldenv100}'')
+and the current folder or directory. For instance, in the text below, 
+the prompt ``\verb#smithj@aldenv52:~$#'' means that user {\tt smithj},
+working at machine {\tt aldenv52}, is in the home directory.
+%, denoted by the tilde ``\verb$~$''. 
+The command ``{\tt cd cs390}'' changes to directory
+{\tt cs390}, and the new prompt indicates this. Typing the command 
+``{\tt cd lab1}'' changes to the {\tt lab1} subdirectory, and the prompt now
+shows this as well:
+\begin{Verbatim}[commandchars=\\\{\}]
+     smithj@aldenv52:~$ cd cs390             \textcolor{red}{\rm\em [in home directory]}
+     smithj@aldenv52:~/cs390$ cd lab1        \textcolor{red}{\rm\em [now in cs390 subdirectory]}
+      ... etc. ...
+\end{Verbatim}
+If you ever see a prompt like ``\verb$smithj@aldenv100:~/Desktop$'' then you
+know that you are in the {\tt Desktop} subdirectory of your home directory.
+%(NOTE: there are ways to change the prompt, so don't be surprised if some day
+%you look at somebody else's screen and see a prompt like 
+%``{\tt What can I do for you?}.'')
+
+\subsubsection*{Arrow Keys}
+\vspace{-0.1in}
+The ``arrow keys'' at the lower right of your keyboard enable you to
+move back through the ``history'' of commands you have typed. For instance,
+it is often the case, when developing a program, that you will
+have to repeatedly type certain commands. There is no need to keep retyping these
+commands! Using the up-arrow key (`` $\uparrow$ '') will let you rapidly
+move back to an earlier command so all you need to do is press the 
+``Enter'' or ``Return'' key. You can also use the left-arrow and 
+right-arrow keys (``$\leftarrow$'' and ``$\rightarrow$'') to move back
+and forth in a typed command to correct typing errors or to use a
+modified version of an earlier command. 
+%(Power users don't like to keep
+%retyping long commands---they'd rather use a few simple keystrokes.)
+
+\subsubsection*{Special Keys}
+\vspace{-0.1in}
+The ``Ctrl'' key (bottom row, below the ``shift'' key) is used in
+conjunction with other keys for special commands. For
+instance, the key combination Ctrl-C will ``kill'' a process that is
+running in the terminal window. (Why would you ever want to do that?
+We will see that if you write a program that goes into an ``infinite
+loop,'' you must terminate it with a Ctrl-C command.)
+
+\noindent The key combination Ctrl-Z will {\em suspend} a process that is
+running in the terminal window; it can later be {\em resumed} in a
+number of ways. This is occasionally useful as we'll see later.
+
+%If you press the key labeled ``PrtScn'', the computer 
+%will take a ``snapshot'' of the screen and save it in 
+%folder named {\tt Pictures} (another subdirectory of your home directory).
+%If you hold down the ``Shift'' key while pressing the ``PrtScn'' button,
+%a plus-shaped cursor will appear and you can use it and the left mouse 
+%button to select a rectangular area of the screen. When you release the
+%mouse button, you will have a snapshot of the selected area.
+
+\subsubsection*{Linux Commands}
+\vspace{-0.1in}
+Table \ref{linux} shows some common Linux commands. You'll note 
+that many of them are just two letters (``{\tt rm}'' for ``remove,''
+``{\tt cp}'' for ``copy,'' etc.). 
+%Power users are lazy---they prefer short
+%commands!
+
+\begin{table}[htbp]
+%\begin{center}
+\caption{Some Common Linux Commands}
+\label{linux}
+\centering
+\begin{tabular}{l|p{1.5in}|p{2.5in}}
+\multicolumn{1}{c}{\bf Command} & \multicolumn{1}{c}{\bf Meaning} &
+\multicolumn{1}{c}{\bf Example}\\\hline
+\rule{0em}{2.5em}\tt ls & List files in current directory & 
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~/cs390/lab1\$ \textcolor{red}{ls}
+Lab1.r Lab1.txt
+\end{Verbatim}
+\end{minipage}\\\hline
+\rule{0em}{1.5em}\tt mkdir {\rm \em name} & Make a new directory called {\em name}
+in the current directory &
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~/cs390\$ \textcolor{red}{mkdir lab2}
+\end{Verbatim}
+\end{minipage}\\\hline
+\rule{0em}{1.5em}\tt cd {\rm \em name} & Change to directory {\em name}
+in the current directory &
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~/cs390\$ \textcolor{red}{cd lab2}
+smithj@aldenv52 ~/cs390/lab2$
+\end{Verbatim}
+\end{minipage}\\\hline
+\rule{0em}{1.5em}\tt cd & Change to home directory &
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~/cs390\$ \textcolor{red}{cd}
+smithj@aldenv113:~\$
+\end{Verbatim}
+\end{minipage}\\\hline
+\rule{0em}{2.5em}\tt cd \verb$..$& Change to directory one level up&
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~/cs390/lab1\$ \textcolor{red}{cd ..}
+smithj@aldenv113:~/cs390\$
+\end{Verbatim}
+\end{minipage}\\\hline
+\rule{0em}{4.5em}\tt cp {\rm \em name1 name2} & Copy file {\em name1} to {\em name2}&
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~\$ \textcolor{red}{ls}
+Fun.r Fun.txt
+smithj@aldenv113:~\$ \textcolor{red}{cp Fun.r Lab2.r}
+smithj@aldenv113:~\$ \textcolor{red}{ls}
+Fun.r Fun.txt Lab2.r
+\end{Verbatim}
+\end{minipage}\\\hline
+\rule{0em}{4.5em}\tt mv {\rm \em name1 name2} & Rename file {\em name1} as {\em name2}&
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~\$ \textcolor{red}{ls}
+Fun.r Fun.txt
+smithj@aldenv113:~\$ \textcolor{red}{mv Fun.r Lab2.r}
+smithj@aldenv113:~\$ \textcolor{red}{ls}
+Fun.r Lab2.r
+\end{Verbatim}
+\end{minipage}\\\hline
+\rule{0em}{4.5em}\tt rm {\rm \em name} & Remove file {\em name}&
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~\$ \textcolor{red}{ls}
+Fun.r Lab2.r
+smithj@aldenv113:~\$ \textcolor{red}{rm Fun.r}
+smithj@aldenv113:~\$ \textcolor{red}{ls}
+Lab2.r
+\end{Verbatim}
+\end{minipage}\\
+\hline
+\rule{0em}{3.5em}\tt pwd & Shows which directory you are in &
+\begin{minipage}{2.5in}
+\begin{Verbatim}[commandchars=\\\{\}]
+smithj@aldenv113:~\$ \textcolor{red}{pwd} \\
+/home/j/smithj/Desktop
+\end{Verbatim}
+\end{minipage}\\
+\hline
+\rule{0em}{1.5em}\tt exit  & Close the terminal  &\\
+\hline
+\end{tabular}
+%\end{center}
+\end{table}
+
+\end{document}

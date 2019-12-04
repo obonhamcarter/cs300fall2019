@@ -1,0 +1,5 @@
+# Date 18 Oct 2017
+# Video: Introduction to genome assembly
+# ref: https://www.youtube.com/watch?v=kxEsN4seqPY
+
+# screenshots: http://www.codoncode.com/aligner/screenshots.htm

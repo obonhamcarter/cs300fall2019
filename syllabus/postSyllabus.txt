@@ -1,0 +1,1 @@
+scp syllabus_cs300_fall2019.pdf obonhamcarter@cs.allegheny.edu:/home/o/obonhamcarter/public_html/cs300/syllabus_cs300_fall2019.pdf

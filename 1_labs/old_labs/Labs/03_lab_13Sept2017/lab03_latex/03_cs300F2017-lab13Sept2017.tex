@@ -1,0 +1,79 @@
+\input{300pre}
+
+\long\def\omitit #1{}
+
+\begin{document}
+\MYTITLE{Lab 3: \\ \color{red}Save this lab assignment to: {\tt labs/lab3}\color{black}}
+\MYHEADERS{Introduction to Bioinformatics}{Due: 20 Sept.}{Handed out on: 13 Sept. 2017}
+
+In this lab assignment you are invited to review your understanding of  biological concepts behind transcription, translation and mutation processes and to continue building on your Python programming skills.
+
+\subsection*{Objectives}
+To strengthen the understanding of the transcription, translation and mutation. To learn and enhance Python programming skills, including how to work with the user input from the terminal and how to create functions. To utilize existing Python programming skills to write a program that checks if a certain string entered by a user is a valid DNA, RNA, or a protein string.
+
+\vspace*{-.1in}
+\subsection*{Reading Assignment}
+\vspace*{-.1in}
+In addition to following the specified sections of the Python tutorial outlined below, please read Chapter 3 in the ``ThinkPython'' book. You should also review class slides and videos on the topics of transcription, translation and mutation. 
+
+\vspace*{-.1in}
+\subsection*{PART 1: Transcription, Translation and Mutation Worksheet}
+\vspace*{-.1in} 
+Navigate to the shared course repository (`cs300f2017-share') and from the terminal window type: \\
+\color{red} {\tt git pull}  \\
+\color{black}
+to download the lab 3 materials. Once you navigate to `lab03' directory, you will find an open office word processing file named `Lab3Part1-ReviewSheet\_i.odt'. Now, in your own course repository (cs300f2017-bbill/labs/), create the directory entitled `lab03', and place a your copy of the file in lab03. Rename the file by adding your username to the end of the file name. Now you can open the document, add your name in the document's ``Name'' blank, and answer the questions related to the transcription, translation and mutations, as specified in the document.
+
+\vspace*{-.1in}
+\subsection*{PART 2  Task 1: Getting to Know Python}
+\vspace*{-.1in} 
+
+To re-enforce Python material covered during the class sessions, please complete Sections 4.6-4.7 and 5 in the Python Tutorial, which can be found in: \url{https://docs.python.org/2.7/tutorial/}. NOTE: if you have a previous experience in using Python, please still browse through the tutorial and then consider lending your skill and help to your fellow classmates.
+
+\noindent Now you are asked to practice those skills by writing programs to accomplish the following small tasks.
+
+\vspace*{-.1in}
+\subsection*{PART 2  Task 2: Python Program}
+\vspace*{-.1in} 
+
+In this part of the lab you are invited to write a Python program that:
+
+\begin{enumerate}
+	\item Asks the user to enter a genetic string (i.e., DNA, RNA or protein).
+	\item Checks what kind of strings have been entered: the program is to test and decide whether the inputted string is DNA, RNA or protein.
+\end{enumerate}
+
+\color{red}
+\noindent Specifically, your program should satisfy the following requirements:
+\begin{itemize}
+	\item Correctly obtain and process the user's inputted string.
+	\item Consist of three separate functions. Each function is to check if the user-entered string is a valid DNA, RNA or a protein string respectively. Each function should return `yes' or `no' after checking. You may use any method to perform these tests but keep in mind that there are specific differences between these genetic string which may be used to determine a particular type of string. 
+	\item Your program should be well-documented and use plenty of comments in to the code to describe (explain) the flow and functionality of your program.
+\end{itemize}
+\color{black}
+
+
+\noindent \emph{Sample Input: } \\
+\noindent AAAACCCGGT \\
+\emph{Sample Output: } \\
+DNA - yes, RNA - no, protein - no\\
+\noindent
+Note: your source file is to be called: ``StringChecker.py''
+
+%%%%%%%%%%%%%%%
+
+\vspace*{-.2in}
+\subsection*{Required Deliverables}
+\vspace*{-.1in}
+All of the deliverables specified below should be placed into a new folder named `lab03' in your Bitbucket repository ({\tt cs300f2017-bbill})  and shared with the instructor by correctly using  appropriate Git commands, such as {\tt git add}, {\tt git commit -m ``your message''} and {\tt git push} to send your documents to the Bitbucket's server. When you have finished, please ensure that you have sent your files correctly to the Bitbucket Web site by checking the {\tt source} files. This will show you your recently pushed files on their web site. Please ask questions, if necessary.
+\color{red}
+
+\begin{itemize}
+%	\item `Lab03Part1\_DNAReview' document with your answers to the outlined questions.
+	\item Add your answered worksheet questions (Lab3Part1-ReviewSheet\_i.odt) to the directory; ``labs/lab03/'' for PART 1.
+	\item Submit a Python program ``StringChecker.py'' for PART 2. Your source code should be able to run without any effort of fixing the errors on behalf of the instructor.
+\end{itemize}
+\color{black}
+
+\noindent You should see the instructor if you have questions about assignment submission.
+\end{document}

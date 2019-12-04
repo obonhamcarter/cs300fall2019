@@ -1,0 +1,93 @@
+\input{300pre}
+
+\long\def\omitit #1{}
+
+\begin{document}
+\MYTITLE{Lab 4: Genomic Regions Associated with Parkinson's Disease \\ \color{red}Save this lab assignment to: {\tt labs/lab4}\color{black}}
+\MYHEADERS{Introduction to Bioinformatics}{Due: 27 Sept.}{Handed out on: 20 Sept. 2017}
+
+\subsection*{Objectives}
+\begin{itemize}
+	\item To learn how to use a Web-based genomic databases and tools.
+	\item To understand the types of information stores in genomic databases.
+	\item To learn how to use different interfaces to find and retrieve genomic information. 
+	\item To Learn how to write a program in python to load files using built-in control statements. 
+\end{itemize}
+
+\vspace*{-.1in}
+\subsection*{Reading Assignment}
+\vspace*{-.1in}
+Chapter 1 in the \emph{Exploring Bioinformatics} textbook.
+
+\vspace*{-.1in}
+\subsection*{PART 1: Retrieving Sequences}
+\vspace*{-.1in} 
+
+A \emph{single-nucleotide polymorphism} (\textbf{SNP}, pronounced snip) is a DNA sequence variation occurring when a single nucleotide adenine (A), thymine (T), cytosine (C), or guanine (G) in the genome (or other shared sequence) differs between members of a species or paired chromosomes in an individual. As mentioned in class, the appearance of these SNPs may be used to separate DNA samples from each other based on the presence or absence of a particular type of nucleotide.
+
+For instance, The research group, Do \emph{et al.} genotyped 3,426 PD patients and 29,624 healthy control individuals for 522,782 known simple nucleotide polymorphisms (SNPs). They identified 11 SNP sites where one allele was correlated with PD with a statistically significant frequency. Known (SNPs) in the human genome are recorded in the primary genomic database dbSNP, where each SNP has a unique accession number that identifies it. In this laboratory assignment you will investigate the genomic neighborhood of one of these SNPs with the accession number \emph{rs11868035}, which was identified by Do \emph{et al.} 
+
+\begin{enumerate}
+	\item The SNP \emph{rs11868035} is located within the gene, \emph{SREBF1}. 
+	
+	\item The sequence of this gene may be viewed by searching for ``SREBF1'' at NCBI's \emph{nucleotide} database \url{https://www.ncbi.nlm.nih.gov/}. %To download the sequence of this gene and/or the protein it encodes, go to the NCBI homepage and perform search for 
+	
+	\item Determine your results from the Entrez database from this query.
+%	Using Entrez interface do a simple search by typing SREBF1 into the search box and choose Nucleotide as the database to search. Look through your search results. 
+	\begin{itemize}
+		\item \textcolor{red}{What general observations can you make regarding the usefulness of your results?}
+		\item \textcolor{red}{What are four different organisms in which this same gene (\emph{SREBF1}) may also be found?}
+	\end{itemize}
+	
+	\item Now, conduct a narrower search by limiting the search to only genes found in human genetic material. Make sure your search results eliminate results that are not actually for SREBF1 but for some nearby gene. 
+	\begin{itemize}
+		\item  \textcolor{red}{What search terms did you use?}
+	\end{itemize}
+	
+	\item Find an entry that includes ``RefSeqGene'' in its title, it should have accession number NG\_029029.1. Click on this sequence and observe the GenBank record for this gene. Click on the FASTA link on the top of the page and save it in a FASTA format in the lab4 directory (create that directory if you don't have one) in in your own course repository (cs300f2017-bbill/labs/). Return to GenBank and navigate through the features list. You can click on the links associated with features to alter the sequence display to show only the desired feature. You can also choose Highlight Sequence Features from the list of links on the top right side of the page to visualize the locations of the features within the sequence. The list on the right also provides links to other additional information about this gene. Explore the various types of information available on this page. 
+	\begin{itemize}
+		\item \textcolor{red}{Through your exploration, what did you learn about the function of this gene?}
+	\end{itemize}
+\end{enumerate}
+
+
+\vspace*{-.1in}
+\subsection*{PART 2: Computational Exercise for Gene Examination}
+\vspace*{-.1in} 
+
+Gene finding in an organism, especially prokaryotes, starts from searching for an open reading frames (ORF). They are used in initial identification of candidate protein coding regions and can assist in gene prediction. An open reading frame starts with an ATG (Met) in most species and ends with a stop codon (TAA, TAG or TGA). In this part of the lab, you will take a step toward examining the SREBF1 sequence that you obtained in part 2 of this lab using computation. Please note that this portion of the lab contains the required portion and an optional portion. Optional portion consists of incremental steps for implementation of a program that would find all possible ORFs. 
+
+\subsubsection*{Required:}
+\color{red}
+\begin{itemize}
+	\item Write an algorithm in English (in your report text file) for finding all possible ORFs in a sequence. Think about the sequence of steps you would need to go through. You may assume that you start with a sequence as an input.
+	\item Write a Python program that reads a DNA sequence from a FASTA file and counts the number of ``ATG''s. Your program should print the sequence name (not the sequence) and then print the number of ATGs found in the sequence. Your program should also print the position/index of the first occurring ATG. Make sure that your program has a comment header with the Honor code, your name, the lab number, the date and the description of the program. Take a snapshot of your program's output after you have completed and tested your program. To test your program's correctness, make a small text file with a few ``ATG''s, and manually verify the results, before running your program on SREBF1.
+\end{itemize}
+\color{black}
+
+\subsubsection*{Optional:}
+Extend your program to (save each one of these as separate programs):
+
+\begin{itemize}
+	\item Count the number of ``TAA''s, the number of ``TAG''s and the number of ``TGA''. Save your program's output after you have completed and tested your program.
+	\item Find and print the first possible open reading frame, that is the first sequence of codons that starts with ``ATG'' and ends with ``TAA'', ``TAG'' or ``TGA'', print its length and its starting position/index and ending position/index. Save your program's output after you have completed and tested your program.
+	\item Find and print all possible open reading frames. For each possible ORF, your program should output the possible ORF, its length, and it should also say the starting and ending point of each ORF. Save your program's output after you have completed and tested your program.
+\end{itemize}
+
+%%%%%%%%%%%%%%%
+
+\vspace*{-.2in}
+\subsection*{Required Deliverables}
+\vspace*{-.1in}
+All of the deliverables specified below should be placed into a new folder named `lab03' in your Bitbucket repository ({\tt cs300f2017-bbill})  and shared with the instructor by correctly using  appropriate Git commands, such as {\tt git add}, {\tt git commit -m ``your message''} and {\tt git push} to send your documents to the Bitbucket's server. When you have finished, please ensure that you have sent your files correctly to the Bitbucket Web site by checking the {\tt source} files. This will show you your recently pushed files on their web site. Please ask questions, if necessary.
+\color{red}
+
+\begin{itemize}
+	\item An electronic version of the report containing the answers to the lab comprehension questions in red and the first computational question in the last part of the lab.
+	\item A completed, properly commented and formatted Python program. Please make sure that your program has a comment header with the Honor code, your name, date and the description of the program (as shown in the class example programs).
+	\item An output produced by running your program.
+\end{itemize}
+\color{black}
+
+\noindent You should see the instructor if you have questions about assignment submission.
+\end{document}

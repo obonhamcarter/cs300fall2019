@@ -1,0 +1,2 @@
+# date: 30 Aug 2019
+scp 01lab_installations.pdf obonhamcarter@cs.allegheny.edu:/home/o/obonhamcarter/public_html/cs300/slides/

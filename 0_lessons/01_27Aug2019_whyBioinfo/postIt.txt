@@ -1,0 +1,1 @@
+scp 01_27Aug2019_whyBioinfo.pdf obonhamcarter@cs.allegheny.edu:/home/o/obonhamcarter/public_html/cs300/slides/01_27Aug2019_whyBioinfo.pdf

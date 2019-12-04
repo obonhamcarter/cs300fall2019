@@ -1,0 +1,45 @@
+LOCUS       HUMCFTR1                 206 bp    DNA     linear   PRI 26-SEP-2002
+DEFINITION  Homo sapiens cystic fibrosis transmembrane conductance regulator
+            (CFTR) gene, exon 10.
+ACCESSION   M55025
+VERSION     M55025.1
+KEYWORDS    cystic fibrosis; transmembrane conductance regulator.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 206)
+  AUTHORS   Kerem,B.-S., Zielenski,J., Markiewicz,D., Bozon,D., Gazit,E.,
+            Yahav,J., Kennedy,D., Riordan,J.R., Collins,F.S., Rommens,J.M. and
+            Tsui,L.-C.
+  TITLE     Identification of mutations in regions corresponding to the two
+            putative nucleotide (ATP)-binding folds of the cystic fibrosis gene
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 87 (21), 8447-8451 (1990)
+   PUBMED   2236053
+FEATURES             Location/Qualifiers
+     source          1..206
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="7"
+                     /map="7q31-q32"
+     variation       7
+                     /gene="CFTR"
+                     /note="G00-120-584; putative; 1717-"
+                     /replace="a"
+     gene            8..199
+                     /gene="CFTR"
+                     /note="cystic fibrosis transmembrane conductance
+                     regulator"
+     exon            8..199
+                     /gene="CFTR"
+                     /note="G00-120-584; putative"
+                     /number=10
+ORIGIN      
+        1 tttccaaact tcacttctaa tgatgattat gggagaactg gagccttcag agggtaaaat
+       61 taagcacagt ggaagaattt cattctgttc tcagttttcc tggattatgc ctggcaccat
+      121 taaagaaaat atcatctttg gtgtttccta tgatgaatat agatacagaa gcgtcatcaa
+      181 agcatgccaa ctagaagagg taagaa
+//
+

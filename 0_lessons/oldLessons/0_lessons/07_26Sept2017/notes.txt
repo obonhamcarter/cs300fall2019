@@ -1,0 +1,8 @@
+Class planning
+26 sept 2017
+
+1) Exercise over converting DNA to RNA to Protein, done by hand.
+	15 mins to work in groups
+
+2) Coding exercise to read through the pseudo code. Update Thursday's code to add template and orientation code. Use “if” statements and user input.
+

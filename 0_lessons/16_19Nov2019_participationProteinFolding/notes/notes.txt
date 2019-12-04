@@ -1,0 +1,6 @@
+# Date: 14 Nov 2017
+
+jmol and pdb database tutorial
+#ref: https://biosci.mcdb.ucsb.edu/biochemistry/tutorials/pdbtutorial/frontwindow.html
+
+https://biosci.mcdb.ucsb.edu/biochemistry/tutorials/Jmol-tutorial-index.htm

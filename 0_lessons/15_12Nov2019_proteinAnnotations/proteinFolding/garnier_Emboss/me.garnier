@@ -1,0 +1,54 @@
+########################################
+# Program: garnier
+# Rundate: Tue 12 Nov 2019 10:56:38
+# Commandline: garnier
+#    [-sequence] me.fasta
+# Report_format: tagseq
+# Report_file: me.garnier
+########################################
+
+#=======================================
+#
+# Sequence: me     from: 1   to: 140
+# HitCount: 22
+#
+# DCH = 0, DCS = 0
+# 
+#  Please cite:
+#  Garnier, Osguthorpe and Robson (1978) J. Mol. Biol. 120:97-120
+# 
+#
+#=======================================
+
+          .   10    .   20    .   30    .   40    .   50
+      ATGTTCACTACCAAGGTAAATATGTACCCAGAGGTGCCCAGCTCATCCCA
+helix             H   HHHHH                             
+sheet         EEEE             EEEE                EEE  
+turns TTTTTTTT     TT      TTTT    TTTTTTTTTTTTTTTT   TT
+ coil                C                                  
+          .   60    .   70    .   80    .   90    .  100
+      GGTGTCAGACGACATAGACAATGACACGCACATCGACGAGGTCGCTGCAT
+helix            HHHHHHHHHHH                            
+sheet      E                           E             EEE
+turns TTTTT TTTTT           TTTTTTTTTTT TTTTTTTTTTTTT   
+ coil                                                   
+          .  110    .  120    .  130    .  140
+      TTGTGAGAAAGTGGTCGGCAGCCGGACTATCTCCCCCCAT
+helix                                         
+sheet E      EEE                              
+turns  T        TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+ coil   CCCCC                                 
+
+#---------------------------------------
+#
+#  Residue totals: H: 17   E: 20   T: 97   C:  6
+#         percent: H: 13.7 E: 16.1 T: 78.2 C:  4.8
+#
+#---------------------------------------
+
+#---------------------------------------
+# Total_sequences: 1
+# Total_length: 140
+# Reported_sequences: 1
+# Reported_hitcount: 22
+#---------------------------------------

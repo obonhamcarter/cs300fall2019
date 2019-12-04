@@ -1,0 +1,78 @@
+
+run a python day using biopython to help with projects.
+# ref: https://krother.gitbooks.io/biopython-tutorial/content/biopython_ref.html
+from Bio.Alphabet import IUPAC
+dna = Seq("AGTACACTGGT", IUPAC.unambiguous_dna)
+print dna
+#AGTACACTGGT
+from Bio.SeqUtils import GC
+GC(dna)
+#45.45454545454545
+
+
+
+
+from Bio import SeqIO
+for record in SeqIO.parse("dogDna.fasta", "fasta"):
+    print record.seq, len(record.seq)
+
+
+# Plotting a histogram of seq lengths with pylab
+
+import pylab
+from Bio import SeqIO
+
+sizes=[len(r.seq) for r in SeqIO.parse("dogDna.fasta","fasta")]
+pylab.hist(sizes, bins=20)
+pylab.title("%i orchid sequences\nLengths %i to %i" \
+            % (len(sizes), min(sizes), max(sizes)))
+pylab.xlabel("Sequence length (bp)")
+pylab.ylabel("Count")
+pylab.show()
+
+
+
+
+# Plotting a histogram of seq lengths with pylab
+
+import pylab
+from Bio import SeqIO
+
+sizes=[len(r.seq) for r in SeqIO.parse("d.fasta","fasta")]
+pylab.hist(sizes, bins=5)
+pylab.title("%i orchid sequences\nLengths %i to %i" \
+            % (len(sizes), min(sizes), max(sizes)))
+pylab.xlabel("Sequence length (bp)")
+pylab.ylabel("Count")
+pylab.show()
+
+
+# Idea: Can the students program a sliding window that checks for CpG Island content (a potential gene discovery.)
+#can the results be plotted?
+
+command to create the plotter:
+pylab.hist([2,4,1,4,2,3],bins = 10)
+pylab.show()
+# we create a list to show.
+
+
+# make a sine-line type plot
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 1, 500)
+y = np.sin(4 * np.pi * x) * np.exp(-5 * x)
+
+fig, ax = plt.subplots()
+
+ax.fill(x, y, zorder=10)
+ax.grid(True, zorder=5)
+plt.show()
+
+
+
+#or check out: https://matplotlib.org/examples/statistics/histogram_demo_cumulative.html
+# or
+https://matplotlib.org/1.2.1/examples/api/histogram_demo.html
+#or scatter plot:
+https://matplotlib.org/1.2.1/api/axes_api.html?highlight=scatter#matplotlib.axes.Axes.scatter

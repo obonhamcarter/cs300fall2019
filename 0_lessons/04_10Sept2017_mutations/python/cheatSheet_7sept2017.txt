@@ -1,0 +1,96 @@
+#date: 6 Sept 2017
+# things to do with python.
+# Consider: https://pythonforbiologists.com/printing-and-manipulating-text/
+
+#ref: https://docs.python.org/2.7/tutorial/controlflow.html#if-statements
+
+
+chapter 4: if statements
+
+num_int = 5
+if num_int == 5:
+	print "The number is five"
+else:
+	print "The number is not five"
+
+#############
+num_int = 50
+if num_int < 4: print "less than four"
+elif num_int == 5: print "equal to five"
+else: print "larger than five"
+
+#############
+
+#s_bol = True
+s_bol = False
+
+if s_bol  == True:
+	print " the variable is true"
+else:
+	print " the variable is false"
+
+#############
+
+chapter 4: for loops
+
+for i in range(5):
+	print i
+
+###########
+
+#python does strings
+seq_str = "hello"
+for i in seq_str:
+	print i
+
+###########
+
+#position of an array (of a string)
+for i in range(len(seq_str)):
+	print seq_str[i]
+###########
+
+s_str = "this is a test"
+print s_str[2:9]
+
+###########
+
+#nested: multiplication table
+for i in range(5):
+	for j in range(5):
+		print i,"*",j,"=",i*j
+
+###########
+
+for n in range(2, 10):
+     for x in range(2, n):
+         if n % x == 0:
+             print n, 'equals', x, '*', n/x
+             break
+     else:
+         # loop fell through without finding a factor
+         print n, 'is a prime number'
+
+############
+
+chapter 4: functions
+
+
+def name():
+     yourName_str = raw_input("Enter your name :")
+     print "Hello, ",yourName_str
+
+
+chapter 5: data structures
+# inspired from tutorial at: https://docs.python.org/2.7/tutorial/datastructures.html#using-lists-as-stacks
+
+
+lists:
+a_list = []
+adding:
+a_list.append("a")
+a_list.append("b")
+a_list = ["a","b"]
+
+removing elements: poping of the last entered one.
+a_list.pop # removes the "b", most recently placed char.

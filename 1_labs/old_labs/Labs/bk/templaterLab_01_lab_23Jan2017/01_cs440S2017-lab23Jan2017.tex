@@ -1,0 +1,98 @@
+
+\input{440pre}
+\begin{document}
+\MYTITLE{Lab 1: Laboratory Assignment One: Customizing and Using the Z Shell}
+\MYHEADERS{Operating Systems}{Due: 30 January 2017 }{Handed out on: 23 January 2017}
+
+
+%Refs:
+% https://github.com/robbyrussell/oh-my-zsh
+% http://ohmyz.sh/
+
+% install zsh
+% sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+% then alter the .zshrc file by adding the ``plug-ins ={}'' line.
+\section{Introduction}
+
+Computer scientists who use, configure, and implement an operating system (OS) often interact
+with the OS through the use of the shell. There are many operating system shells available for the
+Unix, Linux, and Mac OSX operating systems (i.e., sh, tcsh, bash, and fish). In this laboratory
+session, you will learn how to configure and use zsh, arguably the most advanced and customizable
+shell for the Linux operating system; learn more about it by visiting \url{http://zsh.sourceforge.net}.
+
+\section{Configuring and Using the Z Shell}
+
+
+To start using the Z shell, hereafter abbreviated as zsh, you must open a terminal window and
+type zsh. Try to navigate your file system and run a program through zsh. Do you notice any
+differences between this new shell and the one that you were using previously? What is the name
+of the shell that is the default for the Ubuntu operating system? Which do you like better? Why?
+
+
+Zsh can be quickly and easily configured with a community-driven configuration framework
+called \emph{oh-my-zsh}. You can learn more about this framework by visiting the following Web site:
+\url{https://github.com/robbyrussell/oh-my-zsh}. Once you understand the basics of \emph{oh-my-zsh}, please follow the instructions on the project’s Web site to install it in your home account. After
+installing this framework, does your shell operate in a different way? If yes, then how?
+
+
+The \emph{oh-my-zsh} framework supports a wide variety of themes for your shell. Try out the different themes and pick the one that you think is the best. Why did you select the one that you did? What does it look like? \emph{Oh-my-zsh} also furnishes a wide variety of plugins. As part of this laboratory assignment, you should configure zsh to run the git, web-search, wd, z, and zsh-syntax-highlighting plugins. After modifying the .zshrc file to use each of the aforementioned plugins, you should try them out and write a brief commentary on the features that they provide. You can learn more about these plugins by studying the files in the $\mathtt{.oh-my-zsh/plugins}$ directory.
+
+
+Now, you should further customize your Z shell by changing the command prompt so that it
+includes, at minimum, your username and the hostname of the computer you are currently using.
+Please note that while some themes may include this information, others may not and thus require
+additional enhancements. Students can earn extra credit on this assignment if they configure zsh
+to display information about the Git repository that is contained within their current directory; if
+you are interested in pursuing this extra credit, please ask to see instructor’s zsh prompt.
+
+
+Once your have configured zsh so that it is functional and informative, you should use an
+additional Linux command to set it as your default prompt. After you have correctly performed
+this command, all of your terminal windows should always use zsh when you open them. What
+command did you run to achieve this configuration of the Ubuntu operating system?
+
+\color{red}
+\section{Summary of the Required Deliverables}
+
+This assignment invites you to submit printed and signed versions of the following deliverables:
+\begin{itemize}
+  \item Using screenshots and concrete examples, a description of the key features provided by zsh
+  \item A commentary on the features that zsh provides that your previous shell did not
+  \item A tutorial that explains how to download, install, and configure \emph{oh-my-zsh}, including how to:
+  \begin{enumerate}
+    \item Install the \emph{oh-my-zsh} community-driven framework
+    \item Change the display of the zsh prompt (e.g., show the user name and host name)
+    \item Commentary on how to install, configure, and use the following zsh plugins:
+
+	  \begin{enumerate}
+	    \item git
+	    \item web-search
+	    \item wd
+	    \item z
+	    \item zsh-syntax-highlighting
+	  \end{enumerate}
+
+
+    \item Set zsh as the default shell for your Ubuntu workstation
+  \end{enumerate}
+  \item A screenshot showing the final configuration of your zsh prompt in all relevant contexts
+  \item A description of the challenges that you encountered when customizing and using zsh
+\end{itemize}
+\color{black}
+
+It is recognized that not all of the students in the class may be familiar with the Git version
+control system and thus have some difficulty using and configuring the git plugin for Zsh. Students
+who do not have access to a Git repository should see the instructor so that one can be made
+available to them for the purposes of completing this assignment. However, please note that you
+are not required to extensively use a Git repository to complete this assignment. Finally, students
+are strongly encouraged to write their laboratory report in \LaTeX.
+
+In adherence to the honor code, students should complete this assignment on an individual
+basis. While it is appropriate for students in this class to have high-level conversations about the
+assignment, it is necessary to distinguish carefully between the student who discusses the principles
+underlying a problem with others and the student who produces assignments that are identical to,
+or merely variations on, someone else’s work. As such, deliverables that are nearly identical to the
+work of others will be taken as evidence of violating the Honor Code.
+
+
+\end{document}

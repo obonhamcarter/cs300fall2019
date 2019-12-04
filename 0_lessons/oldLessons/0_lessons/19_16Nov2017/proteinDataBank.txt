@@ -1,0 +1,62 @@
+# date: 16 Nov 2017
+# protein Data Bank Workshop
+# Web site: https://www.rcsb.org
+# ref: https://www.youtube.com/watch?v=Oxq7WEZR3O4
+# ref: https://www.youtube.com/watch?v=_ok64nYRiCY
+
+
+# Catalyse Enzyme protein: 8CAT
+# Function: The NADPH binding site on beef liver catalase
+
+# Search for
+PDB_ID: 8CAT
+# Select sJmol to display 3D view of the secondary structure.
+# Plug-in jmol viewer:
+
+
+# views using colours
+
+Color: "By Amino Acid"
+switch from secondary structure to amino acid display.
+Note: The various colours indicate the different different amino acids which have been arranged in a long chain (Primary Structure: the arrangement of amino acids in the string like a string of pearls.)
+
+
+
+Color: "Secondary Structure"
+Different colours shown.
+
+Note: Pink coils. Alpha helices makeup stronger, inflexible parts of the protein and are able to maintain protein structure.)
+
+Note: Beige pleated sheets makeup the flexible and elastic parts of the protein.
+
+
+#Water interaction with the environment. Tertiary structure to show how the protein molecule interacts with water molecules.
+
+Color: "Hydrophobicity"
+
+Note: the view of the protein is now made up of red and blue regions.
+
+Blue: hydrophilic and charged regions which are attracted to water. Water interaction induces a folding pattern in protein. Tend to be more to the outside of the protein to be able to interact with water.
+
+Red: hydrophobic tend to be found inside the protein and away from the water molecules and do not interact with water.
+
+
+Color: "Chain"
+
+The number of colours that we see in the protein shows us how many smaller proteins have come together to make up the larger protein. These parts perform specific functions of the main protein and make up specialist functional regions.
+
+# Check for little sets of molecules: molecular bunches found inside the protein somewhere. These atomic groups help to perform extra tasks and help to add extra functionality to the protein. Atomic parts add extra functions which may be specific to the protein's function.
+
+
+#################################
+New protein to discuss: Hen Egg White Lysozyme
+PDB ID: 193L
+
+
+Protein details: origins, sequence information, annotation contribution of the sequence regions in terms of structure (i.e., coils, sheets, helices and turns). Amino acid sequence in FASTA format.
+
+
+
+
+Mol notes: to show the parts of of protein as we saw above.
+right click menu: color -> atoms -> by scheme -> choose

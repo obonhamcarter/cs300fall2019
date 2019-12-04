@@ -1,0 +1,223 @@
+\input{IncludeFile}
+
+\long\def\omitit #1{}
+
+\begin{document}
+
+\MYTITLE{Lab 6:\\ Global Alignment}
+\MYHEADERS{}{\color{red} Due: 21$^{st}$ October \color{black}}{Handed out: 7$^{th}$ October 2019}
+
+
+%\MYTITLE{Lab 6: Alignment \\ 
+%\color{red}Save this lab assignment to: {\tt labs/lab6}\color{black}}
+%\MYHEADERS{Introduction to Bioinformatics}{Due: 11$^{th}$ Oct.}{Handed out on: 20$^{th}$ Oct. 2019}
+
+\subsubsection*{GitHub starter link}
+\begin{center}
+\color{red} \url{https://classroom.github.com/a/I4lq9OBw} \color{black}
+\end{center}
+
+
+
+To use this link, please follow the steps below.
+\begin{itemize}
+	\item Click on the link and accept the assignment.
+	\item Once the importing task has completed, click on the created assignment link which will take you to your newly created GitHub repository for this lab.
+	\item Clone this repository (bearing your name) and work on the practical locally.
+	\item As you are working on your practical, you are to commit and push regularly. You can use the following commands to add a single file, you must be in the directory where the file is located (or add the path to the file in the command):
+		\begin{itemize}
+		\item {\tt git add -A}
+		\item {\tt git commit -m ``Your notes about commit here''}
+		\item {\tt git push}
+	\end{itemize}
+
+	Alternatively, you can use the following commands to add multiple files from your repository:
+	\begin{itemize}
+		\item {\tt git commit <}\emph{nameOfFile}\tt{> -m ``Your notes about commit here''}
+		\item {\tt git push}
+	\end{itemize}
+\end{itemize}
+%%%
+
+
+
+\vspace*{-.1in}
+\subsection*{Objectives}
+\vspace*{-.1in}
+
+\begin{itemize}
+	\item To understand the value of aligning genes and recognize the practical applications of this technique.
+	\item To gain familiarity with the use of web-based alignment tools to explore sequence similarity and understand how to modify their parameters.
+
+\end{itemize}
+
+\vspace*{-.1in}
+\subsection*{Reading Assignment}
+\vspace*{-.1in}
+Chapter 3 in Exploring Bioinformatics textbook.
+
+\vspace*{-.1in}
+\subsection*{Part 1:  Small Tasks using the Needleman-Wunsch Algorithm}
+\vspace*{-.1in} 
+
+
+In this part of the lab you are invited to further practice using a particular global alignment technique called the \emph{Needleman-Wunsch} algorithm. In this lab, you are to create a report document that provides the answers or solutions to the following tasks:
+
+% online: https://www.ebi.ac.uk/Tools/psa/emboss_needle/
+
+\begin{table}[h!]
+	\caption{Label your matrix in this fashion and use the lettering-system to indicate the calculations of your own implementation of the NeedleMan-Wunsch algorithm for alignment. In your calculations document, please label each series of calculations according to the letter in the cell.}
+	\label{tab:matrix}
+	\begin{center}
+	\begin{tabular}{|c||c|c|c|}
+	\hline
+		&&{\color{red}\textbf{A}}&{\color{red}\textbf{T}}\\
+		\hline\hline
+		&0&-1&-2\\
+		\hline
+		{\color{red}\textbf{A}}&-1&(a)&(b)\\
+		\hline
+		{\color{red}\textbf{T}}&-2&(c)&(d)\\
+		\hline
+		{\color{red}\textbf{G}}&-3&(e)&(f)\\
+	\hline
+	\end{tabular}
+	\end{center}
+\end{table}
+
+
+
+\begin{enumerate}
+	\item \textbf{By Hand}: Compute the alignment of the two sequences shown in the Table \ref{tab:matrix} using the Needleman-Wunsch algorithm. The match, mismatch and gap scores are, 1, 0, -1, respectively. In your written work using the file {writing/calc.md}, please be sure to have all calculations listed on the relevant lines according to the letter of the cell. 
+	
+	\item \textbf{By software}: Use the included program (file: {\tt src/needman-Wunsch\_localAlignment\_i.py}) to implement a global alignment of the sequences of files {\tt input/s1.txt} and {\tt input/s2.txt}). Answer the below \color{blue} Questions-in-blue \color{black} for part 1. 
+	
+	\begin{enumerate}
+	  \item \color{blue} How similar were the two sequences (s1.txt and (s2.txt) which you applied to the included alignment program written in Python3? \color{black}
+
+	  \item \color{blue} Are the two sequences closely related to each other? \color{black}
+
+      \item \color{blue} What proof do you have to suggest such a claim? \color{black}
+	\end{enumerate}
+	
+	
+	\end{enumerate}
+
+
+\vspace*{-.1in}
+\subsection*{Part 2:  Investigation of Online Alignment Tools for Influenza Virus}
+\vspace*{-.1in} 
+
+
+%#=======================================
+%#
+%# Aligned_sequences: 2
+%# 1: A_China_GD01_2006_(H5N1)_segment_4
+%# 2: A_chicken_Viet_Nam_10_2005_(H5N1)_segment_4
+%# Matrix: EBLOSUM62
+%# Gap_penalty: 10.0
+%# Extend_penalty: 0.5
+%#
+%# Length: 1776
+%# Identity:    1690/1776 (95.2%)
+%# Similarity:  1690/1776 (95.2%)
+%# Gaps:          45/1776 ( 2.5%)
+%# Score: 9435.0
+%# 
+%#
+%#=======================================
+
+
+
+%#=======================================
+%#
+%# Aligned_sequences: 2
+%# 1: A_China_GD01_2006_(H5N1)_segment_4
+%# 2: A_avian_Hong_Kong_719_2007_(H5N1)_segment_4
+%# Matrix: EBLOSUM62
+%# Gap_penalty: 10.0
+%# Extend_penalty: 0.5
+%#
+%# Length: 1776
+%# Identity:    1731/1776 (97.5%)
+%# Similarity:  1731/1776 (97.5%)
+%# Gaps:          25/1776 ( 1.4%)
+%# Score: 9703.0
+%# 
+%#
+%#=======================================
+
+
+%#=======================================
+%#
+%# Aligned_sequences: 2
+%# 1: A_China_GD01_2006_(H5N1)_segment_4
+%# 2: A_avian_Hong_Kong_719_2007_(H5N1)_segment_4
+%# Matrix: EBLOSUM62
+%# Gap_penalty: 10.0
+%# Extend_penalty: 0.5
+%#
+%# Length: 1776
+%# Identity:    1731/1776 (97.5%)
+%# Similarity:  1731/1776 (97.5%)
+%# Gaps:          25/1776 ( 1.4%)
+%# Score: 9703.0
+%# 
+%#
+%#=======================================
+
+
+In the second part of the lab you are invited to explore online global and local alignment tools to investigate similarity in viruses. 
+
+\noindent Influenza viruses have received a great deal of study, and the ability to compare many strains has led to significant advances in understanding what allows one virus to cause a more severe disease than another. The H5N1 ``bird flu'' virus makes an interesting case in point. The virus causes severe influenza in birds and has become established in populations of domestic chickens and turkeys.  Human cases of influenza also occur sporadically, mostly in individuals heavily exposed to infected birds, such as poultry farmers. Interestingly, once a human case occurs, however, spread to another human is exceedingly rare, even among family members in close contact with the infected individual.  
+
+\noindent A 2006 article by van Riel \emph{et al.} demonstrated that the avian H5N1 virus binds to a form of sialic acid receptor that, in humans, is only found in lung tissue of the \emph{lower} respiratory system. Human viruses, in contrast, bind to a form of the receptor common in the \emph{upper} respiratory tract. Thus, it is difficult for H5N1 to infect humans because our respiratory defenses normally prevent the virus from reaching the lungs. However, a mutant strain in which the virus was altered to be able to bind to sialic acid receptors in the upper respiratory tract could be a very dangerous strain indeed for humans.
+
+\noindent So far, no such H5N1 strains that infect humans efficiently have been observed. However, we might ask whether the strains that do make it into humans tend to have altered genes  - if so, that would suggest that either adaptive mutations could be occurring within the human host or that the viruses that cause human infections are subpopulations that are already better adapted. There are many avian H5N1 sequences available and a number of sequences of the H5N1 viruses isolated from infected humans, so we can use sequence alignment to see whether these have essentially the same strain or one of noticeable differences.
+
+\begin{enumerate}
+	\item Find the listed file (below) that have been have been placed in the {\tt data} directory of your repository.
+	
+	\begin{itemize}
+		\item {\tt Influenza\_A\_Chicken\_Vietnam2005\_avianH5N1\_segment4.txt}
+		\item {\tt Influenza\_avianHong\_Kong2007\_avianH5N1\_segment4.txt}
+		\item {\tt Influenza\_A\_ChinaGD012006\_humanH5N1isolate\_segment4.txt}
+	\end{itemize}
+
+	
+% https://www.ebi.ac.uk/Tools/emboss/
+% https://www.ebi.ac.uk/Tools/psa/emboss_needle/
+
+    \item You are to go to the EMBOSS \emph{Needle} webpage at \url{www.ebi.ac.uk/Tools/emboss/} to perform a global alignment of the above three sequences. Note, there will be three alignments (of sequence pairs) to perform. For example for the sequences, $a$, $b$, and $c$, there will be comparisons of $(a,b)$, $(a,c)$ and $(b,c)$. Please save your results as a screen shot or as a text file.
+
+%		\item Then, you are to go to NCBI and use a tool called BLAST to perform a similar alignment experiment. BLAST is a local alignment technique, where sequence alignment is done by finding one sequence within another.  The influenza virus M2 gene, for example, is another key player in the biology of the virus: once the virus enters the cell, M2 is involved in the release of the virus genome subunits so they can travel to the nucleus and direct viral replication.  Suppose we have sequenced segment 7 from the 2009 H1N1 pandemic virus but are uncertain what part of it represents the actual M2 coding region. To find out, we could align the well-characterized M2 coding sequence from the Brisbane strain with the full segment 7 sequence from the newly sequenced virus.
+
+	\item \color{blue}\textbf{Questions-in-blue}: \color{black} Add the following responses to your report:
+	\begin{enumerate}
+		\item \color{blue} How much similarity exists between each of the sequences to the others? \color{black}
+		\item \color{blue} Based on your results (which are too few to provide a comprehensive study), do you believe there is evidence that human adaptation is occurring in H5N1 viruses that might merit concern about human-to-human transmission in the near future? \color{black}
+%		\item Discuss similarities and differences between the alignment techniques (Emboss versus Blast at NCBI) you have selected.
+		\item \color{blue} Statistics: What were the numbers of \textbf{\emph{Lengths}}, \textbf{\emph{Similarities}}, \textbf{\emph{Gaps}} and \textbf{\emph{Scores}} for each of your alignment tasks? \color{black}
+	\end{enumerate}
+\end{enumerate}
+
+
+\color{red}
+\vspace*{-.2in}
+\subsection*{Required Deliverables}
+\vspace*{-.1in}
+    \begin{itemize}
+     \item Part1's calculations of the alignment done by hand, File: {\tt /writing/calc.md}. 
+     \item Questions in blue of Parts 1 and 2, File: {\tt /writing/report.md}
+    \end{itemize}
+\color{black}
+
+
+\noindent Please see the instructor if you have questions about assignment or its submission.
+
+\end{document}
+
+%%%% junk bin %%%%
+%%%% junk bin %%%%
+%%%% junk bin %%%%
+%%%% junk bin %%%%

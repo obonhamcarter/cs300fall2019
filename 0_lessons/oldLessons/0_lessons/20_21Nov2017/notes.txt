@@ -1,0 +1,8 @@
+# Date: 15 Nov 2017
+
+# ideas for class workshops
+ref : https://modbase.compbio.ucsf.edu/modeval/
+Check the human cancer Protein Interaction Network (HCPIN) gallery
+ref: http://nesg.org/galleries.html 
+
+
